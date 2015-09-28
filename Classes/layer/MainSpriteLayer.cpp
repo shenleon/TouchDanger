@@ -9,11 +9,11 @@ bool MainSpriteLayer::init()
 	origin = CCDirector::sharedDirector()->getVisibleOrigin();
 	visibleSize = CCDirector::sharedDirector()->getVisibleSize();
 	//Ìí¼Ó½ÇÉ«
-	playerSprite = RoleSprite::create("baihu.png", CCRectMake(0, 0, 114, 165));
+	playerSprite = new RoleSprite();
+	playerSprite->init();
+	playerSprite->autorelease();
 	playerSprite->setPosition(ccp(playerSprite->getContentSize().width / 2, playerSprite->getContentSize().height / 2));
 	this->addChild(playerSprite);
-	CCAction * action = CCJumpTo::create(0.5f, ccp(visibleSize.width/2,playerSprite->getContentSize().height/2),visibleSize.height/2,1);
-	playerSprite->runAction(action);
 
 	return true;
 }

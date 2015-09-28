@@ -2,12 +2,16 @@
 #define __ROLE_SPRITE_
 
 #include "cocos2d.h"
+#include <spine/spine-cocos2dx.h>
 
 /*½ÇÉ«¾«Áé*/
 class RoleSprite : public cocos2d::CCSprite
 {
+protected:
+	cocos2d::CCPoint origin;
+	cocos2d::CCSize visibleSize;
+	cocos2d::extension::CCSkeletonAnimation* skeletonNode;
 public:
-	static RoleSprite* create(const char *pszFileName, const cocos2d::CCRect& rect);
 	virtual bool init();
 	CREATE_FUNC(RoleSprite);
 };
