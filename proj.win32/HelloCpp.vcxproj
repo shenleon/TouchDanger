@@ -138,6 +138,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\Classes\layer\MainTouchLayer.cpp" />
     <ClCompile Include="..\Classes\scene\GameMainScene.cpp" />
     <ClCompile Include="..\Classes\scene\GameStartScene.cpp" />
+    <ClCompile Include="..\Classes\sprite\NpcSprite.cpp" />
+    <ClCompile Include="..\Classes\sprite\RoleSprite.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,9 +147,12 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\layer\GameStartLayer.h" />
     <ClInclude Include="..\Classes\layer\MainMenuLayer.h" />
     <ClInclude Include="..\Classes\layer\MainSpriteLayer.h" />
+    <ClInclude Include="..\Classes\layer\MainTouchDelegate.h" />
     <ClInclude Include="..\Classes\layer\MainTouchLayer.h" />
     <ClInclude Include="..\Classes\scene\GameMainScene.h" />
     <ClInclude Include="..\Classes\scene\GameStartScene.h" />
+    <ClInclude Include="..\Classes\sprite\NpcSprite.h" />
+    <ClInclude Include="..\Classes\sprite\RoleSprite.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

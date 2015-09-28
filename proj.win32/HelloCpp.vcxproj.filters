@@ -42,6 +42,12 @@
     <ClCompile Include="..\Classes\layer\GameStartLayer.cpp">
       <Filter>Classes\layer</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\sprite\RoleSprite.cpp">
+      <Filter>Classes\spirte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sprite\NpcSprite.cpp">
+      <Filter>Classes\spirte</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -67,6 +73,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\layer\GameStartLayer.h">
       <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\MainTouchDelegate.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sprite\RoleSprite.h">
+      <Filter>Classes\spirte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sprite\NpcSprite.h">
+      <Filter>Classes\spirte</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
