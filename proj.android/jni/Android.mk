@@ -8,9 +8,17 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   ../../Classes/HelloWorldScene.cpp
-
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
+                   ../../Classes/sprite/NpcSprite.cpp \
+				   ../../Classes/sprite/RoleSprite.cpp \
+				   ../../Classes/scene/GameMainScene.cpp \
+				   ../../Classes/sprite/GameStartScene.cpp \
+				   ../../Classes/layer/GameStartLayer.cpp \
+				   ../../Classes/layer/MainMenuLayer.cpp \
+				   ../../Classes/layer/MainSpriteLayer.cpp \
+				   ../../Classes/layer/MainTouchLayer.cpp
+				
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
+					$(LOCAL_PATH)/../..
 
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static

@@ -13,9 +13,12 @@ bool GameStartLayer::init()
 	CCLOG("%f %f", origin.x, visibleSize.width);
 	CCLOG("%f %f", origin.y, visibleSize.height);
 
+	CCDictionary * strings = CCDictionary::createWithContentsOfFile("strings.xml");
+	CCString * str = dynamic_cast<CCString*>(strings->objectForKey("start_str"));
+	
 
 	//添加一个开始按钮
-	CCLabelTTF * pLab = CCLabelTTF::create("Start", "Arial", 32);
+	CCLabelTTF * pLab = CCLabelTTF::create(str->getCString(), "方针粗圆简体", 32);
 	CCMenuItemLabel * pStartItem = CCMenuItemLabel::create(pLab, this, menu_selector(GameStartLayer::menuCloseCallBack));
 	CCSize size = pStartItem->getContentSize();
 	pStartItem->setPosition(ccp((origin.x + visibleSize.width - size.width / 2) / 2, (origin.y + visibleSize.height - size.height / 2) / 2));
