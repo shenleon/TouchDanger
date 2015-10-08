@@ -7,11 +7,8 @@ bool RoleSprite::init()
 {
 	if (!CCSprite::init())
 		return false;
-	origin = CCDirector::sharedDirector()->getVisibleOrigin();
-	visibleSize = CCDirector::sharedDirector()->getVisibleSize();
 	CCLOG("============= player init");
-	this->setContentSize(CCSizeMake(114,165));
-	this->setPosition(ccp(this->getContentSize().width / 2, this->getContentSize().height / 2));
+	
 
 	skeletonNode = CCSkeletonAnimation::createWithFile("spine/spineboy.json", "spine/spineboy.atlas");
 	skeletonNode->setMix("walk", "jump", 0.4f);
@@ -24,9 +21,11 @@ bool RoleSprite::init()
 	skeletonNode->setPosition(ccp(0,20));
 	skeletonNode->setScale(0.3, 0.3);
 	this->addChild(skeletonNode);
+	this->setContentSize(skeletonNode->getContentSize());
 
-	CCAction * action = CCMoveTo::create(5.0f, ccp(visibleSize.width/2,this->getContentSize().height/2));
-	this->runAction(action);
+
+	/*CCAction * action = CCMoveTo::create(5.0f, ccp(visibleSize.width/2,this->getContentSize().height/2));
+	this->runAction(action);*/
 
 	return true;
 }
