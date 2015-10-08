@@ -1,5 +1,6 @@
 #include "GameStartLayer.h"
 #include "scene\GameMainScene.h"
+#include "utils\Utils.h"
 
 USING_NS_CC;
 
@@ -10,15 +11,8 @@ bool GameStartLayer::init()
 	origin = CCDirector::sharedDirector()->getVisibleOrigin();
 	visibleSize = CCDirector::sharedDirector()->getVisibleSize();
 
-	CCLOG("%f %f", origin.x, visibleSize.width);
-	CCLOG("%f %f", origin.y, visibleSize.height);
-
-	CCDictionary * strings = CCDictionary::createWithContentsOfFile("strings.xml");
-	CCString * str = dynamic_cast<CCString*>(strings->objectForKey("start_str"));
-	
-
 	//添加一个开始按钮
-	CCLabelTTF * pLab = CCLabelTTF::create(str->getCString(), "方针粗圆简体", 32);
+	CCLabelTTF * pLab = CCLabelTTF::create(Utils::getCString("start_str"), FONT_FZ, 32);
 	CCMenuItemLabel * pStartItem = CCMenuItemLabel::create(pLab, this, menu_selector(GameStartLayer::menuCloseCallBack));
 	CCSize size = pStartItem->getContentSize();
 	pStartItem->setPosition(ccp((origin.x + visibleSize.width - size.width / 2) / 2, (origin.y + visibleSize.height - size.height / 2) / 2));
@@ -28,8 +22,6 @@ bool GameStartLayer::init()
 	pMenu->addChild(pStartItem, 1, 1);
 	this->addChild(pMenu, 1);
 
-	CCLOG("%f", size.width);
-
 	return true;
 }
 
@@ -37,7 +29,8 @@ bool GameStartLayer::init()
 void transitionMainScene()
 {
 	GameMainScene * mainScene = GameMainScene::create();
-	CCDirector::sharedDirector()->replaceScene(mainScene);
+	CCTransitionPageTurn * pageTurn = CCTransitionPageTurn::create(0.5, mainScene, false);
+	CCDirector::sharedDirector()->replaceScene(pageTurn);
 }
 
 void GameStartLayer::menuCloseCallBack(cocos2d::CCObject * pSender)

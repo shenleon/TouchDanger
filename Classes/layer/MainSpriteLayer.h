@@ -5,6 +5,7 @@
 #include "MainTouchDelegate.h"
 #include "sprite\RoleSprite.h"
 #include "sprite\NpcSprite.h"
+#include "MainResourceDelegate.h"
 
 /*æ´¡Èœ‘ æ≤„*/
 class MainSpriteLayer : public cocos2d::CCLayer , public MainTouchDelegate
@@ -15,6 +16,7 @@ protected:
 public:
 	CC_SYNTHESIZE(RoleSprite *, playerSprite, PlayerSprite);
 	CC_SYNTHESIZE(NpcSprite *, npcSprite, NpcSprite);
+	CC_SYNTHESIZE(MainResourceDelegate *, p_mMainResourceDelegate, MainResourceDelegate);
 public:
 	virtual bool init();
 	virtual void singleTouchDirecting(cocos2d::CCPoint point);

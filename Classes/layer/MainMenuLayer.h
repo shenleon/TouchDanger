@@ -8,6 +8,9 @@ class MainMenuLayer : public cocos2d::CCLayer
 {
 public:
 	virtual bool init();
+	/*添加系统菜单*/
+	void addSystemMenu();
+	void systemMenuAction(cocos2d::CCObject * sender);
 	CREATE_FUNC(MainMenuLayer);
 };
 
