@@ -3,11 +3,6 @@
 
 USING_NS_CC;
 
-enum{
-	LAB_LIFE,
-	LAB_MONEY
-};
-
 bool MainResourceLayer::init()
 {
 	if (!CCLayer::init())
@@ -29,17 +24,17 @@ bool MainResourceLayer::init()
 void MainResourceLayer::incrLife(int val)
 {
 	this->setLife(this->getLife() + val);
-	CCNode * node = this->getChildByTag(LAB_LIFE);
-	CCLabelTTF * lab = dynamic_cast<CCLabelTTF*>(node);
-	if (lab != NULL)
-	{
-		lab->setString(CCString::createWithFormat("Life:%d",this->getLife())->getCString());
-	}
+	this->updateLifeShow();
 }
 
 void MainResourceLayer::decrLife(int val)
 {
 	this->setLife(this->getLife() - val);
+	this->updateLifeShow();
+}
+
+void MainResourceLayer::updateLifeShow()
+{
 	CCNode * node = this->getChildByTag(LAB_LIFE);
 	CCLabelTTF * lab = dynamic_cast<CCLabelTTF*>(node);
 	if (lab != NULL)
@@ -50,10 +45,22 @@ void MainResourceLayer::decrLife(int val)
 
 void MainResourceLayer::incrMoney(int val)
 {
-	CCLOG("==========incrMoney val = %d", val);
+	this->setMoney(this->getMoney() + val);
+	this->updateMoneyShow();
 }
 
 void MainResourceLayer::decrMoney(int val)
 {
-	CCLOG("==========decrMoney val = %d", val);
+	this->setMoney(this->getMoney() - val);
+	this->updateMoneyShow();
+}
+
+void MainResourceLayer::updateMoneyShow()
+{
+	CCNode * node = this->getChildByTag(LAB_MONEY);
+	CCLabelTTF * lab = dynamic_cast<CCLabelTTF*>(node);
+	if (lab != NULL)
+	{
+		lab->setString(CCString::createWithFormat("Money:%d", this->getMoney())->getCString());
+	}
 }
