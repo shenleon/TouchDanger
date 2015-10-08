@@ -1,4 +1,8 @@
-﻿<dict>  
+﻿<dict>
     <key>start_str</key>  
     <string>开始</string>
+    <key>system_str</key>
+    <string>系统</string>
+    <key>bundle_str</key>
+    <string>包裹</string>
 </dict>  
