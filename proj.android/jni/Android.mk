@@ -10,12 +10,13 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
                    ../../Classes/sprite/NpcSprite.cpp \
 				   ../../Classes/sprite/RoleSprite.cpp \
-				   ../../Classes/scene/GameMainScene.cpp \
-				   ../../Classes/sprite/GameStartScene.cpp \
-				   ../../Classes/layer/GameStartLayer.cpp \
 				   ../../Classes/layer/MainMenuLayer.cpp \
 				   ../../Classes/layer/MainSpriteLayer.cpp \
-				   ../../Classes/layer/MainTouchLayer.cpp
+				   ../../Classes/layer/MainTouchLayer.cpp \
+				   ../../Classes/scene/GameMainScene.cpp \
+				   ../../Classes/layer/GameStartLayer.cpp \
+				   ../../Classes/scene/GameStartScene.cpp
+				   
 				
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes \
 					$(LOCAL_PATH)/../..
