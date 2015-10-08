@@ -8,8 +8,6 @@
 class RoleSprite : public cocos2d::CCSprite
 {
 protected:
-	cocos2d::CCPoint origin;
-	cocos2d::CCSize visibleSize;
 	cocos2d::extension::CCSkeletonAnimation* skeletonNode;
 public:
 	virtual bool init();
