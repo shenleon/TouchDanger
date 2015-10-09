@@ -11,6 +11,7 @@ protected:
 	cocos2d::extension::CCSkeletonAnimation* skeletonNode;
 public:
 	virtual bool init();
+	void stop();
 	CREATE_FUNC(RoleSprite);
 };
 
