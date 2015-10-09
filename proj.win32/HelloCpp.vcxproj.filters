@@ -16,6 +16,12 @@
     <Filter Include="Classes\layer">
       <UniqueIdentifier>{88eee8c5-cd5c-4572-a7af-d2d7239cee66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{2953e58b-cc0d-4709-93d7-a0173765ea22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\utils">
+      <UniqueIdentifier>{062346e0-2944-41c5-8754-91fa38c32ce8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -47,6 +53,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\sprite\NpcSprite.cpp">
       <Filter>Classes\spirte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\utils\Utils.cpp">
+      <Filter>Classes\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layer\MainResourceLayer.cpp">
+      <Filter>Classes\layer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -83,5 +95,30 @@
     <ClInclude Include="..\Classes\sprite\NpcSprite.h">
       <Filter>Classes\spirte</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\utils\Utils.h">
+      <Filter>Classes\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\MainResourceLayer.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\MainResourceDelegate.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\CloseNormal.png">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="..\Resources\CloseSelected.png">
+      <Filter>Resource</Filter>
+    </Image>
+    <Image Include="..\Resources\HelloWorld.png">
+      <Filter>Resource</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\Resources\strings.xml">
+      <Filter>Resource</Filter>
+    </Xml>
   </ItemGroup>
 </Project>
