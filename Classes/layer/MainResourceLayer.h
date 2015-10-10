@@ -13,20 +13,20 @@ enum{
 class MainResourceLayer : public cocos2d::CCLayer , public MainResourceDelegate
 {
 protected:
-	CC_SYNTHESIZE(int*, p_mLife, Life);
+	CC_SYNTHESIZE(int*, p_mExperience, Experience);
 	CC_SYNTHESIZE(int*, p_mMoney, Money);
 public:
 	virtual bool init();
-	/*增加生命值*/
-	virtual void incrLife(int val);
-	/*扣除生命值*/
-	virtual void decrLife(int val);
+	/*增加经验*/
+	virtual void incrExperience(int val);
+	/*扣除经验*/
+	virtual void decrExperience(int val);
 	/*增加金钱*/
 	virtual void incrMoney(int val);
 	/*扣除金钱*/
 	virtual void decrMoney(int val);
 	/*更新生命值显示 */
-	virtual void updateLifeShow();
+	virtual void updateExperienceShow();
 	/*更新金钱显示*/
 	virtual void updateMoneyShow();
 	CREATE_FUNC(MainResourceLayer);

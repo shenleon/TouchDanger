@@ -9,24 +9,15 @@ bool MainSpriteLayer::init()
 	origin = CCDirector::sharedDirector()->getVisibleOrigin();
 	visibleSize = CCDirector::sharedDirector()->getVisibleSize();
 	//添加背景底图
-	CCTMXTiledMap * map = CCTMXTiledMap::create("TileMaps/road.tmx");
-	this->addChild(map, 1, 1);	
-	//map->setAnchorPoint(ccp(0.5f, 0.5f));
-	//map->setPosition(ccp(visibleSize.width / 2, visibleSize.height / 2));
-
-	//CCLayerColor * bg = CCLayerColor::create(ccc4(0, 255, 0, 100));
-	//bg->setContentSize(visibleSize);
-	////bg->setAnchorPoint(ccp(0.5f, 0.5f));
-	//bg->setPosition(ccp(0,0));
-	//this->addChild(bg);
-
+	pMap = CCTMXTiledMap::create("TileMaps/road.tmx");
+	this->addChild(pMap, 0);
 	//初始化npc列表
 	npcs = new CCArray();
 	npcs->autorelease();
 	npcs->retain();
 	//添加角色
 	playerSprite = RoleSprite::create();
-	playerSprite->setPosition(ccp(visibleSize.width*0.4, playerSprite->getContentSize().height / 2+30));
+	playerSprite->setPosition(ccp(visibleSize.width*0.4, playerSprite->getContentSize().height / 2+50));
 	this->addChild(playerSprite);
 	//启动npc添加事件
 	this->schedule(schedule_selector(MainSpriteLayer::updateNpc), 1);
@@ -46,15 +37,15 @@ void MainSpriteLayer::singleTouchDirecting(CCPoint point)
 
 void MainSpriteLayer::singleTouchEndsIn(CCPoint point)
 {
-	this->getMainResourceDelegate()->incrLife(100);
+	this->getMainResourceDelegate()->incrExperience(100);
 	playerSprite->stop();
 }
 
 void MainSpriteLayer::addNpc()
 {
 	NpcSprite * npc = NpcSprite::create();
-	int tag = time(NULL);
-	npc->setName(CCString::createWithFormat("npc%d",tag));
+	int tag = CCRANDOM_0_1()*100;
+	npc->setName(CCString::create("npc"));
 	npc->setPosition(ccp(visibleSize.width - npc->getContentSize().width / 2, npc->getContentSize().height / 2 + 30));
 	this->addChild(npc, 1, tag);
 	npcs->addObject(npc);
@@ -83,7 +74,12 @@ void MainSpriteLayer::updateNpc(float ft)
 		if (obj == NULL) continue;
 		npc = dynamic_cast<NpcSprite*>(obj);
 		if (npc == NULL) continue;
-		CCLOG("x = %d,y=%d,name=%s", npc->getPositionX(),npc->getPositionY(),npc->getName()->getCString());
+		CCPoint point = npc->getPosition();
+		point = this->convertToNodeSpace(point);
+
+		CCLOG("player x = %d",playerSprite->getPosition().x);
+
+		CCLOG("x = %f,y=%f,name=%s", point.x, npc->getPositionY(), npc->getName());
 		if (npc->getPositionX() <= 0)
 		{
 			this->removeNpc(npc);

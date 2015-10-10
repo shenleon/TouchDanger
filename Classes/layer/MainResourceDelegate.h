@@ -4,8 +4,8 @@
 class MainResourceDelegate
 {
 public:
-	virtual void incrLife(int val) = 0;
-	virtual void decrLife(int val) = 0;
+	virtual void incrExperience(int val) = 0;
+	virtual void decrExperience(int val) = 0;
 	virtual void incrMoney(int val) = 0;
 	virtual void decrMoney(int val) = 0;
 };

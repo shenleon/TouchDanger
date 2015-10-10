@@ -7,39 +7,47 @@ bool MainResourceLayer::init()
 {
 	if (!CCLayer::init())
 		return false;
-	this->setLife(0);
+	this->setExperience(0);
 	this->setMoney(0);
 	CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
-	//血条
-	CCLabelTTF * lifeLab = CCLabelTTF::create("Life:0", FONT_2, 16);
+	CCLayerColor * bg = CCLayerColor::create(ccc4(0, 0, 0, 255));
+	bg->setContentSize(CCSizeMake(visibleSize.width, 45));
+	bg->setPosition(ccp(0, visibleSize.height - bg->getContentSize().height / 2));
+	this->addChild(bg, -1);
+	//经验
+	const char * experience_str = Utils::getCString("experience_str");
+	CCLabelTTF * lifeLab = CCLabelTTF::create(CCString::createWithFormat(experience_str, this->getExperience())->getCString(), FONT_2, 16);
 	lifeLab->setPosition(ccp(lifeLab->getContentSize().width / 2 + 20, visibleSize.height-lifeLab->getContentSize().height/2));
 	this->addChild(lifeLab, 0, LAB_LIFE);
 	//金钱
-	CCLabelTTF * moneyLab = CCLabelTTF::create("Money:0", FONT_2, 16);
+	const char * money_str = Utils::getCString("money_str");
+	CCLabelTTF * moneyLab = CCLabelTTF::create(CCString::createWithFormat(money_str, this->getMoney())->getCString(), FONT_2, 16);
 	moneyLab->setPosition(ccp(moneyLab->getContentSize().width / 2 + lifeLab->getContentSize().width + 100, visibleSize.height - moneyLab->getContentSize().height / 2));
 	this->addChild(moneyLab, 0, LAB_MONEY);
 	return true;
 }
 
-void MainResourceLayer::incrLife(int val)
+void MainResourceLayer::incrExperience(int val)
 {
-	this->setLife(this->getLife() + val);
-	this->updateLifeShow();
+	this->setExperience(this->getExperience() + val);
+	this->updateExperienceShow();
 }
 
-void MainResourceLayer::decrLife(int val)
+void MainResourceLayer::decrExperience(int val)
 {
-	this->setLife(this->getLife() - val);
-	this->updateLifeShow();
+	this->setExperience(this->getExperience() - val);
+	this->updateExperienceShow();
 }
 
-void MainResourceLayer::updateLifeShow()
+void MainResourceLayer::updateExperienceShow()
 {
 	CCNode * node = this->getChildByTag(LAB_LIFE);
 	CCLabelTTF * lab = dynamic_cast<CCLabelTTF*>(node);
 	if (lab != NULL)
 	{
-		lab->setString(CCString::createWithFormat("Life:%d", this->getLife())->getCString());
+		//经验
+		const char * experience_str = Utils::getCString("experience_str");
+		lab->setString(CCString::createWithFormat(experience_str, this->getExperience())->getCString());
 	}
 }
 
@@ -61,6 +69,8 @@ void MainResourceLayer::updateMoneyShow()
 	CCLabelTTF * lab = dynamic_cast<CCLabelTTF*>(node);
 	if (lab != NULL)
 	{
-		lab->setString(CCString::createWithFormat("Money:%d", this->getMoney())->getCString());
+		//金钱
+		const char * money_str = Utils::getCString("money_str");
+		lab->setString(CCString::createWithFormat(money_str, this->getMoney())->getCString());
 	}
 }

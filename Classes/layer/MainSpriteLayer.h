@@ -16,6 +16,7 @@ protected:
 	cocos2d::CCPoint origin;
 	cocos2d::CCSize visibleSize;
 	cocos2d::CCArray * npcs;
+	cocos2d::CCTMXTiledMap * pMap;
 public:
 	CC_SYNTHESIZE(RoleSprite *, playerSprite, PlayerSprite);
 	CC_SYNTHESIZE(NpcSprite *, npcSprite, NpcSprite);
