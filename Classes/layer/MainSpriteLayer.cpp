@@ -9,7 +9,7 @@ bool MainSpriteLayer::init()
 	origin = CCDirector::sharedDirector()->getVisibleOrigin();
 	visibleSize = CCDirector::sharedDirector()->getVisibleSize();
 	//Ìí¼Ó±³¾°µ×Í¼
-	CCTMXTiledMap * map = CCTMXTiledMap::create("map/road.tmx");
+	CCTMXTiledMap * map = CCTMXTiledMap::create("TileMaps/road.tmx");
 	this->addChild(map, 1, 1);	
 	//map->setAnchorPoint(ccp(0.5f, 0.5f));
 	//map->setPosition(ccp(visibleSize.width / 2, visibleSize.height / 2));
