@@ -5,4 +5,8 @@
     <string>系统</string>
     <key>bundle_str</key>
     <string>包裹</string>
+    <key>money_str</key>
+    <string>金钱：%d</string>
+    <key>experience_str</key>
+    <string>经验：%d</string>
 </dict>  
