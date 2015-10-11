@@ -1,12 +1,20 @@
 ﻿<dict>
     <key>start_str</key>  
     <string>开始</string>
-    <key>system_str</key>
-    <string>系统</string>
+    <key>player_str</key>
+    <string>角色</string>
     <key>bundle_str</key>
     <string>包裹</string>
     <key>money_str</key>
-    <string>金钱：%d</string>
+    <string>金币：%d</string>
     <key>experience_str</key>
     <string>经验：%d</string>
+    <key>please_hold_me_str</key>
+    <string>请帮我一下吧。</string>
+    <key>good_luck_str</key>
+    <string>运气真好，奖励你%d点经验和%d个金币。</string>
+    <key>bad_luck_str</key>
+    <string>运气真不好，被讹诈的。被扣除了%d点经验和%d个金币。</string>
+    <key>I_know_str</key>
+    <string>我知道了</string>
 </dict>  
