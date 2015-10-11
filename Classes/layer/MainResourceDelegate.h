@@ -4,10 +4,10 @@
 class MainResourceDelegate
 {
 public:
-	virtual void incrExperience(int val) = 0;
-	virtual void decrExperience(int val) = 0;
-	virtual void incrMoney(int val) = 0;
-	virtual void decrMoney(int val) = 0;
+	virtual void incrExperience(const int val) = 0;
+	virtual void decrExperience(const int val) = 0;
+	virtual void incrMoney(const int val) = 0;
+	virtual void decrMoney(const int val) = 0;
 };
 
 #endif

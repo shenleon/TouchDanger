@@ -24,6 +24,23 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
+	//CCSize frameSize = pEGLView->getFrameSize();
+	//CCSize winSize = CCSize(480,320);
+	//float widthRate = frameSize.width/winSize.width;
+	//float heightRate = frameSize.height/winSize.height;
+
+	//if (widthRate > heightRate)
+	//{
+	//        //里边传入的前俩个参数就是逻辑分辨率的大小，也就是通过getWinSize()得到的大小
+	//        pEGLView->setDesignResolutionSize(winSize.width,
+	//            winSize.height*heightRate/widthRate, kResolutionNoBorder);
+	//}
+	//else
+	//{
+	//        pEGLView->setDesignResolutionSize(winSize.width*widthRate/heightRate, winSize.height,
+	//            kResolutionNoBorder);
+	// }
+
     // create a scene. it's an autorelease object
 	CCScene *pScene = GameStartScene::create();
     // run

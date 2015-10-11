@@ -27,13 +27,13 @@ bool MainResourceLayer::init()
 	return true;
 }
 
-void MainResourceLayer::incrExperience(int val)
+void MainResourceLayer::incrExperience(const int val)
 {
 	this->setExperience(this->getExperience() + val);
 	this->updateExperienceShow();
 }
 
-void MainResourceLayer::decrExperience(int val)
+void MainResourceLayer::decrExperience(const int val)
 {
 	this->setExperience(this->getExperience() - val);
 	this->updateExperienceShow();
@@ -51,13 +51,13 @@ void MainResourceLayer::updateExperienceShow()
 	}
 }
 
-void MainResourceLayer::incrMoney(int val)
+void MainResourceLayer::incrMoney(const int val)
 {
 	this->setMoney(this->getMoney() + val);
 	this->updateMoneyShow();
 }
 
-void MainResourceLayer::decrMoney(int val)
+void MainResourceLayer::decrMoney(const int val)
 {
 	this->setMoney(this->getMoney() - val);
 	this->updateMoneyShow();

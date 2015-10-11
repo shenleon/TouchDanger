@@ -21,20 +21,20 @@ void MainMenuLayer::addSystemMenu()
 	CCSize visbleSize = CCDirector::sharedDirector()->getVisibleSize();
 	CCMenu * menu = CCMenu::create();
 	GLfloat _x = 0, _y = 0;
-	//系统
-	CCLabelTTF * pLab = CCLabelTTF::create(Utils::getCString("system_str"), FONT_FZ, 24);
+	//角色
+	CCLabelTTF * pLab = CCLabelTTF::create(Utils::getCString("player_str"), FONT_FZ, 24);
+	pLab->setColor(ccc3(255,0,0));
 	CCMenuItemLabel * item = CCMenuItemLabel::create(pLab, this, menu_selector(MainMenuLayer::systemMenuAction));
 	item->setTag(ITEM_SYSTEM);
-	item->addChild(CCLayerColor::create(ccc4(255, 0, 0, 100), item->getContentSize().width, item->getContentSize().height));
 	_x = item->getContentSize().width / 2 - visbleSize.width / 2;
 	_y = item->getContentSize().height / 2 - visbleSize.height / 2;
 	item->setPosition(ccp(_x, _y));
 	menu->addChild(item);
 	//包裹
 	pLab = CCLabelTTF::create(Utils::getCString("bundle_str"), FONT_FZ, 24);
+	pLab->setColor(ccc3(255,0,0));
 	item = CCMenuItemLabel::create(pLab, this, menu_selector(MainMenuLayer::systemMenuAction));
 	item->setTag(ITEM_BUNDLE);
-	item->addChild(CCLayerColor::create(ccc4(255, 0, 0, 100), item->getContentSize().width, item->getContentSize().height));
 	_x += item->getContentSize().width+10;
 	item->setPosition(ccp(_x, _y));
 	menu->addChild(item);
