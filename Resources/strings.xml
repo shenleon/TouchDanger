@@ -17,4 +17,8 @@
     <string>运气真不好，被讹诈的。被扣除了%d点经验和%d个金币。</string>
     <key>I_know_str</key>
     <string>我知道了</string>
+    <key>game_over_str</key>
+    <string>钱被骗完了，游戏结束了</string>
+    <key>try_again_str</key>
+    <string>再来一次</string>
 </dict>  

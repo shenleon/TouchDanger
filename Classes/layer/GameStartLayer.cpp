@@ -16,11 +16,15 @@ bool GameStartLayer::init()
 	CCMenuItemLabel * pStartItem = CCMenuItemLabel::create(pLab, this, menu_selector(GameStartLayer::menuCloseCallBack));
 	CCSize size = pStartItem->getContentSize();
 	pStartItem->setPosition(ccp((origin.x + visibleSize.width - size.width / 2) / 2, (origin.y + visibleSize.height - size.height / 2) / 2));
-
+	//添加开始菜单
 	CCMenu * pMenu = CCMenu::create();
 	pMenu->setPosition(CCPointZero);
 	pMenu->addChild(pStartItem, 1, 1);
 	this->addChild(pMenu, 1);
+	//添加一个特效
+	CCParticleSystem * particle = CCParticleExplosion::create();
+	particle->setTexture(CCTextureCache::sharedTextureCache()->addImage("snow.png"));
+	this->addChild(particle,1);
 
 	return true;
 }
@@ -29,8 +33,8 @@ bool GameStartLayer::init()
 void transitionMainScene()
 {
 	GameMainScene * mainScene = GameMainScene::create();
-	CCTransitionPageTurn * pageTurn = CCTransitionPageTurn::create(0.5, mainScene, false);
-	CCDirector::sharedDirector()->replaceScene(pageTurn);
+	CCTransitionFade * fade = CCTransitionFade::create(2.0f,mainScene);
+	CCDirector::sharedDirector()->replaceScene(fade);
 }
 
 void GameStartLayer::menuCloseCallBack(cocos2d::CCObject * pSender)

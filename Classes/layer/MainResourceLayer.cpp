@@ -1,4 +1,5 @@
 #include "MainResourceLayer.h"
+#include "GameOverLayer.h"
 #include "utils\Utils.h"
 
 USING_NS_CC;
@@ -60,6 +61,12 @@ void MainResourceLayer::incrMoney(const int val)
 void MainResourceLayer::decrMoney(const int val)
 {
 	this->setMoney(this->getMoney() - val);
+	if(this->getMoney()<=0)
+	{
+		GameOverLayer * layer = GameOverLayer::create();
+		layer->initWithColor(ccc4(0,0,0,255));
+		this->getParent()->addChild(layer,20);
+	}
 	this->updateMoneyShow();
 }
 

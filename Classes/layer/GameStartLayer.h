@@ -4,7 +4,7 @@
 #include "cocos2d.h"
 
 /*游戏开始面板*/
-class GameStartLayer : public cocos2d::CCLayer
+class GameStartLayer : public cocos2d::CCLayerColor
 {
 private:
 	cocos2d::CCPoint origin;

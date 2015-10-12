@@ -9,6 +9,8 @@
 
 class GameMainScene : public cocos2d::CCScene
 {
+public:
+	CC_SYNTHESIZE(int,childIndex,ChildIndex);
 protected:
 	MainSpriteLayer * spriteLayer;
 	MainMenuLayer * menuLayer;
@@ -16,6 +18,7 @@ protected:
 	MainResourceLayer * resourceLayer;
 public:
 	virtual bool init();
+	virtual void onExit();
 	CREATE_FUNC(GameMainScene);
 };
 

@@ -9,6 +9,11 @@
 #include "sprite\NpcTouchDelegate.h"
 /*场景中同时出现精灵的个数*/
 #define NPC_MAX 1
+/*失败几率最大值*/
+#define RANDOM_MAX 75.0f
+/*失败几率最大值*/
+#define RANDOM_MIN 5.0f
+
 
 /*精灵显示层*/
 class MainSpriteLayer : public cocos2d::CCLayer , public MainTouchDelegate ,public NpcTouchDelegate
@@ -16,6 +21,7 @@ class MainSpriteLayer : public cocos2d::CCLayer , public MainTouchDelegate ,publ
 private:
 	cocos2d::CCLayer * dialog;
 	NpcSprite * selectNpc;
+	float randomVal;
 protected:
 	cocos2d::CCPoint origin;
 	cocos2d::CCSize visibleSize;

@@ -23,3 +23,12 @@ bool GameMainScene::init()
 
 	return true;
 }
+
+void GameMainScene::onExit()
+{
+	spriteLayer = NULL;
+	menuLayer = NULL;
+	touchLayer = NULL;
+	resourceLayer = NULL;
+	CCScene::onExit();
+}

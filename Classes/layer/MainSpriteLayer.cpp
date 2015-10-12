@@ -8,24 +8,22 @@ enum{
 	ITEM_CANCEL//取消
 };
 
-#define RANDOM_RATE 15	//失败的几率
-
 bool MainSpriteLayer::init()
 {
 	if (!CCLayer::init())
 		return false;
 	selectNpc = NULL;
 	dialog = NULL;
+	randomVal = RANDOM_MIN;
 	//初始化随机种子
 	srand(time(NULL));
 	origin = CCDirector::sharedDirector()->getVisibleOrigin();
 	visibleSize = CCDirector::sharedDirector()->getVisibleSize();
 	//添加背景底图
-	pMap = CCTMXTiledMap::create("TileMaps/road.tmx");
-	this->addChild(pMap, 0);
+	/*pMap = CCTMXTiledMap::create("TileMaps/road.tmx");
+	this->addChild(pMap, 0);*/
 	//初始化npc列表
-	npcs = new CCArray();
-	npcs->autorelease();
+	npcs = CCArray::create();
 	npcs->retain();
 	//添加角色
 	playerSprite = RoleSprite::create();
@@ -107,14 +105,24 @@ void MainSpriteLayer::touchNpc(const int tag)
 		npc->stopAllActions();
 		//判断几率
 		float rate = CCRANDOM_0_1()*100;
-		CCLOG("rate = %f",rate);
-		if(rate<=RANDOM_RATE)
+		CCLOG("rate = %f,randomVal=%f",rate,randomVal);
+		if(rate <= randomVal)
 		{
+			randomVal --;
+			if(randomVal <= RANDOM_MIN)
+			{
+				randomVal = RANDOM_MIN;
+			}
 			this->getMainResourceDelegate()->decrExperience(1);
 			this->getMainResourceDelegate()->decrMoney(1);
 			popMenuDialog(CCString::createWithFormat(Utils::getCString("bad_luck_str"),1,1)->getCString());
 		}else
 		{
+			randomVal ++;
+			if(randomVal >= RANDOM_MAX)
+			{
+				randomVal = RANDOM_MAX;
+			}
 			this->getMainResourceDelegate()->incrExperience(1);
 			this->getMainResourceDelegate()->incrMoney(1);
 			popMenuDialog(CCString::createWithFormat(Utils::getCString("good_luck_str"),1,1)->getCString());

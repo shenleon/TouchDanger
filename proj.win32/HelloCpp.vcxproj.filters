@@ -60,6 +60,9 @@
     <ClCompile Include="..\Classes\layer\MainResourceLayer.cpp">
       <Filter>Classes\layer</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\layer\GameOverLayer.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -102,6 +105,12 @@
       <Filter>Classes\layer</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\layer\MainResourceDelegate.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sprite\NpcTouchDelegate.h">
+      <Filter>Classes\spirte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\GameOverLayer.h">
       <Filter>Classes\layer</Filter>
     </ClInclude>
   </ItemGroup>
