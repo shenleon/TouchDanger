@@ -1,6 +1,8 @@
 ﻿<dict>
     <key>start_str</key>  
     <string>开始</string>
+    <key>close_str</key>
+    <string>关闭</string>
     <key>player_str</key>
     <string>角色</string>
     <key>bundle_str</key>
