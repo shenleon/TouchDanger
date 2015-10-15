@@ -22,6 +22,14 @@ bool MainSpriteLayer::init()
 	//Ìí¼Ó±³¾°µ×Í¼
 	/*pMap = CCTMXTiledMap::create("TileMaps/road.tmx");
 	this->addChild(pMap, 0);*/
+	CCSprite * bg = CCSprite::create("road.jpg");
+	bg->setScaleX(visibleSize.width/bg->getContentSize().width);
+	bg->setScaleY(visibleSize.height/bg->getContentSize().height);
+	float _x = (visibleSize.width/bg->getContentSize().width)*bg->getContentSize().width;
+	float _y = (visibleSize.height/bg->getContentSize().height)*bg->getContentSize().height;
+	bg->setPosition(ccp(_x/2,_y/2));
+
+	this->addChild(bg,0);
 	//³õÊ¼»¯npcÁĞ±í
 	npcs = CCArray::create();
 	npcs->retain();

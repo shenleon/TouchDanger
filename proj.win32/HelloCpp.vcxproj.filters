@@ -63,6 +63,15 @@
     <ClCompile Include="..\Classes\layer\GameOverLayer.cpp">
       <Filter>Classes\layer</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\layer\BundleLayer.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layer\RoleLayer.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\layer\AlertLayer.cpp">
+      <Filter>Classes\layer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -113,6 +122,16 @@
     <ClInclude Include="..\Classes\layer\GameOverLayer.h">
       <Filter>Classes\layer</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\layer\RoleLayer.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\layer\BundleLayer.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\Classes\layer\AlertLayer.h">
+      <Filter>Classes\layer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Resources\CloseNormal.png">
@@ -129,5 +148,8 @@
     <Xml Include="..\Resources\strings.xml">
       <Filter>Resource</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HelloCpp.rc" />
   </ItemGroup>
 </Project>

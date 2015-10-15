@@ -1,10 +1,12 @@
-﻿生成启动时间为 2015/10/12 21:59:30。
+﻿生成启动时间为 2015/10/15 23:13:20。
      1>项目“E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\HelloCpp.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug.win32\HelloCpp.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\include" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\platform\win32" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\external" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\CocosDenshion\include" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\extensions" /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\layer\MainSpriteLayer.cpp
-         MainSpriteLayer.cpp
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\include" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\kazmath\include" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\platform\win32" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\platform\third_party\win32" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\cocos2dx\platform\third_party\win32\OGLES" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\external" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\external\chipmunk\include\chipmunk" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\CocosDenshion\include" /I"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\..\..\..\extensions" /I..\Classes /I.. /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc100.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\layer\MainMenuLayer.cpp
+         MainMenuLayer.cpp
+       ResourceCompile:
+         所有输出均为最新。
        ManifestResourceCompile:
          所有输出均为最新。
        PreLinkEvent:
@@ -13,14 +15,18 @@
          :VCEnd
          复制了 2 个文件
        Link:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\HelloCpp.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\\" libExtensions.lib libcocos2d.lib libCocosDenshion.lib opengl32.lib glew32.lib libBox2d.lib libchipmunk.lib libcurl_imp.lib pthreadVCE2.lib websockets.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug.win32\HelloCpp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\HelloCpp.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\HelloCpp.lib" /MACHINE:X86 Debug.win32\HelloCpp.exe.embed.manifest.res
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\HelloCpp.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\\" libExtensions.lib libcocos2d.lib libCocosDenshion.lib opengl32.lib glew32.lib libBox2d.lib libchipmunk.lib libcurl_imp.lib pthreadVCE2.lib websockets.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug.win32\HelloCpp.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\HelloCpp.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\cocos2d-x-2.2.6\projects\TouchDanger\proj.win32\Debug.win32\HelloCpp.lib" /MACHINE:X86 Debug.win32\HelloCpp.res
+         Debug.win32\HelloCpp.exe.embed.manifest.res
          Debug.win32\AppDelegate.obj
+         Debug.win32\AlertLayer.obj
+         Debug.win32\BundleLayer.obj
          Debug.win32\GameOverLayer.obj
          Debug.win32\GameStartLayer.obj
          Debug.win32\MainMenuLayer.obj
          Debug.win32\MainResourceLayer.obj
          Debug.win32\MainSpriteLayer.obj
          Debug.win32\MainTouchLayer.obj
+         Debug.win32\RoleLayer.obj
          Debug.win32\GameMainScene.obj
          Debug.win32\GameStartScene.obj
          Debug.win32\NpcSprite.obj
@@ -45,4 +51,4 @@
 
 生成成功。
 
-已用时间 00:00:07.44
+已用时间 00:00:07.22
