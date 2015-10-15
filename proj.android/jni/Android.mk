@@ -8,13 +8,15 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
+				   ../../Classes/utils/Utils.cpp \
                    ../../Classes/sprite/NpcSprite.cpp \
 				   ../../Classes/sprite/RoleSprite.cpp \
 				   ../../Classes/layer/MainMenuLayer.cpp \
 				   ../../Classes/layer/MainSpriteLayer.cpp \
 				   ../../Classes/layer/MainTouchLayer.cpp \
-				   ../../Classes/scene/GameMainScene.cpp \
+				   ../../Classes/layer/MainResourceLayer.cpp \
 				   ../../Classes/layer/GameStartLayer.cpp \
+				   ../../Classes/scene/GameMainScene.cpp \
 				   ../../Classes/scene/GameStartScene.cpp
 				   
 				
