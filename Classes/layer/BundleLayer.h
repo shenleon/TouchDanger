@@ -6,6 +6,8 @@
 /** °ü¹üÃæ°å */
 class BundleLayer : public AlertLayer
 {
+protected:
+	CC_SYNTHESIZE(cocos2d::CCArray*,p_mPropNodeList,PropNodeList);
 public:
 	virtual bool init();
 	CREATE_FUNC(BundleLayer);

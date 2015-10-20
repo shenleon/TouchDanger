@@ -165,6 +165,7 @@ void MainSpriteLayer::touchSelect(CCObject * sender)
 		{
 			npcs->removeObject(selectNpc);
 			this->removeChild(selectNpc);
+			this->playerSprite->walk();
 			selectNpc = NULL;
 			this->getParent()->removeChild(dialog);
 			dialog = NULL;

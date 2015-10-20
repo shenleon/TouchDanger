@@ -12,6 +12,7 @@ protected:
 public:
 	virtual bool init();
 	void stop();
+	void walk();
 	CREATE_FUNC(RoleSprite);
 };
 

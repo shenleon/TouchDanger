@@ -35,3 +35,8 @@ void RoleSprite::stop()
 {
 	skeletonNode->setAnimation("stand", true);
 }
+
+void RoleSprite::walk()
+{
+	skeletonNode->setAnimation("walk", true);
+}

@@ -22,6 +22,9 @@
     <Filter Include="Classes\utils">
       <UniqueIdentifier>{062346e0-2944-41c5-8754-91fa38c32ce8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\bean">
+      <UniqueIdentifier>{bdbed817-0da4-4469-884c-586f141e159d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,6 +74,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\layer\AlertLayer.cpp">
       <Filter>Classes\layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bean\Prop.cpp">
+      <Filter>Classes\bean</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\sprite\PropNode.cpp">
+      <Filter>Classes\spirte</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\bean\Player.cpp">
+      <Filter>Classes\bean</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +143,15 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="..\Classes\layer\AlertLayer.h">
       <Filter>Classes\layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bean\Prop.h">
+      <Filter>Classes\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\sprite\PropNode.h">
+      <Filter>Classes\spirte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\bean\Player.h">
+      <Filter>Classes\bean</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

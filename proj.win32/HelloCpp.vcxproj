@@ -132,6 +132,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\bean\Player.cpp" />
+    <ClCompile Include="..\Classes\bean\Prop.cpp" />
     <ClCompile Include="..\Classes\layer\AlertLayer.cpp" />
     <ClCompile Include="..\Classes\layer\BundleLayer.cpp" />
     <ClCompile Include="..\Classes\layer\GameOverLayer.cpp" />
@@ -144,12 +146,15 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClCompile Include="..\Classes\scene\GameMainScene.cpp" />
     <ClCompile Include="..\Classes\scene\GameStartScene.cpp" />
     <ClCompile Include="..\Classes\sprite\NpcSprite.cpp" />
+    <ClCompile Include="..\Classes\sprite\PropNode.cpp" />
     <ClCompile Include="..\Classes\sprite\RoleSprite.cpp" />
     <ClCompile Include="..\Classes\utils\Utils.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\bean\Player.h" />
+    <ClInclude Include="..\Classes\bean\Prop.h" />
     <ClInclude Include="..\Classes\layer\AlertLayer.h" />
     <ClInclude Include="..\Classes\layer\BundleLayer.h" />
     <ClInclude Include="..\Classes\layer\GameOverLayer.h" />
@@ -165,6 +170,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\..\external\libwebsockets\win32\lib\*.*" "$(OutD
     <ClInclude Include="..\Classes\scene\GameStartScene.h" />
     <ClInclude Include="..\Classes\sprite\NpcSprite.h" />
     <ClInclude Include="..\Classes\sprite\NpcTouchDelegate.h" />
+    <ClInclude Include="..\Classes\sprite\PropNode.h" />
     <ClInclude Include="..\Classes\sprite\RoleSprite.h" />
     <ClInclude Include="..\Classes\utils\Utils.h" />
     <ClInclude Include="main.h" />
