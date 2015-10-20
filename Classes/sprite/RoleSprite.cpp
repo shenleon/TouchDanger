@@ -14,6 +14,7 @@ bool RoleSprite::init()
 	this->addChild(pBg,0);*/
 
 	skeletonNode = CCSkeletonAnimation::createWithFile("spine/spineboy.json", "spine/spineboy.atlas");
+	skeletonNode->setMix("stand", "walk", 0.4f);
 	skeletonNode->setMix("walk", "jump", 0.4f);
 	skeletonNode->setMix("jump", "walk", 0.4f);
 	skeletonNode->setAnimation("walk", true);
@@ -32,5 +33,5 @@ bool RoleSprite::init()
 
 void RoleSprite::stop()
 {
-	//skeletonNode->setAnimation(NULL, true);
+	skeletonNode->setAnimation("stand", true);
 }

@@ -19,6 +19,7 @@ bool NpcSprite::init()
 	bg->setContentSize(this->getContentSize());
 	this->addChild(bg,0);*/
 	skeletonNode = CCSkeletonAnimation::createWithFile("spine/spineboy.json", "spine/spineboy.atlas");
+	skeletonNode->setMix("stand", "walk", 0.4f);
 	skeletonNode->setMix("walk", "jump", 0.4f);
 	skeletonNode->setMix("jump", "walk", 0.4f);
 	skeletonNode->setAnimation("walk", true);
@@ -56,6 +57,7 @@ void NpcSprite::move()
 
 void NpcSprite::stop()
 {
+	skeletonNode->setAnimation("stand", true);
 	//添加头顶对话框
 	CCLabelTTF * msg = CCLabelTTF::create(Utils::getCString("please_hold_me_str"),FONT_FZ,16);
 	msg->setPosition(ccp(0,0));

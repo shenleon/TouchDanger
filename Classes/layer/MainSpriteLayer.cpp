@@ -96,6 +96,7 @@ void MainSpriteLayer::updateNpc(float ft)
 		if(npc->getPositionX() - npc->getContentSize().width/2 <= playerSprite->getPositionX()+playerSprite->getContentSize().width/2)
 		{
 			pauseSchedulerAndActions();
+			playerSprite->stop();
 			npc->stop();
 			CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(npc, 0, false);
 		}
