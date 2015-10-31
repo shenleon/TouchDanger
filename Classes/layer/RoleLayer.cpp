@@ -8,7 +8,7 @@ bool RoleLayer::init()
 {
 	if(!AlertLayer::init())
 		return false;
-	Player * p = Player::player();
-	CCLOG(p->getName()->getCString());
+	Player * p = Player::instance();
+	CCLOG(p->getName());
 	return true;
 }

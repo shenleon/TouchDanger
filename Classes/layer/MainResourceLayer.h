@@ -12,9 +12,6 @@ enum{
 
 class MainResourceLayer : public cocos2d::CCLayer , public MainResourceDelegate
 {
-protected:
-	CC_SYNTHESIZE(int, p_mExperience, Experience);
-	CC_SYNTHESIZE(int, p_mMoney, Money);
 public:
 	virtual bool init();
 	/*增加经验*/
